@@ -1,0 +1,56 @@
+﻿#logo {
+    color: whitesmoke;
+    background-color: darkkhaki;
+    display: inline.block;
+    font-size: 32px;
+    font-weight: bold;
+    padding: 8px;
+    margin-top: 16px;
+
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif
+    margin: 0;
+}
+
+#logo-name {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 16px;
+}
+
+#navigation a {
+    color: gray;
+    padding: 8px;
+
+}
+
+#navigation a:hover {
+    color: rgb(211, 70, 94);
+}
+
+#image {
+    width: 100%;
+    height: auto;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+#main {
+    width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+#top {
+    text-align: center;
+
+}
+
+#footer {
+    text-align: center;
+    color: gray;
+    padding: 16px;
+
+}
