@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/lorenzenCT/kaffeeR-sterei#readme",
   "dependencies": {
-    "live-server": "^1.2.2"
+    "live-server": "^1.2.2",
+    "rellax": "^1.12.1"
   }
 }
