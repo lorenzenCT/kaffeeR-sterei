@@ -1,35 +1,31 @@
-class Router {
+import { Router } from './classes/Router.js';
 
-    constructor() {
+let snippetsPath = "media/snippets/";
+let router = new Router(snippetsPath);
 
-    }
-
-    readFile(file) {
-        var rawFile = new XMLHttpRequest();
-        rawFile.open("GET", file, false);
-        rawFile.onreadystatechange = function () {
-            if (rawFile.readyState === 4) {
-                if (rawFile.status === 200 || rawFile.status == 0) {
-                    var allText = rawFile.responseText;
-                    alert(allText);
-                }
-            }
-        }
-        rawFile.send();
-    }
-
-    switchContent(newContent) {
-        document.querySelector('main').InnerHTML = newContent;
-    }
+function onNavItemClick(el, href) {
+    el.addEventListener('click', (e) => {
+        e.preventDefault();
+        console.log("on click ");
+        router.readFile(snippetsPath + "_" + href, function (data) {
+            router.switchContent(data);
+        });
+    });
 }
 
-let router = new Router();
+// set all nav links
+function setNavLinks() {
+    let nav_items = document.querySelectorAll('div#navigation a');
+    let href = "";
 
-let newContent = router.readFile("file:///home/mschulze/PhpstormProjects/BBS1/Bleecker%20Street%20HP/web/media/snippets/contact.html");
-//"file:///home/mschulze/PhpstormProjects/BBS1/Bleecker%20Street%20HP/web/media/img/sebastian-schuppik-H7xTpvBjJS4-unsplash.jpg"
+    console.log(nav_items);
 
-console.log(newContent);
+    nav_items.forEach((el) => {
+        href = el.getAttribute('href');
+        onNavItemClick(el, href);
+    });
 
-setTimeout(function () {
-    router.switchContent(newContent);
-}, 1000 * 3);
+
+}
+
+setNavLinks();
