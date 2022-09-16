@@ -7,6 +7,7 @@ export class Router {
 
     readFile(file, cb) {
         var rawFile = new XMLHttpRequest();
+        console.log(this.snippetsPath + file);
         rawFile.open("GET", this.snippetsPath + file, false);
         rawFile.onreadystatechange = function () {
             if (rawFile.readyState === 4) {
@@ -39,6 +40,7 @@ export class Router {
         console.log("switching content");
         this.toggleLoading();
         setTimeout(() => {
+            // console.log(newContent);
             document.querySelector('#main').innerHTML = newContent;
             this.toggleLoading();
             console.log("switching done");
