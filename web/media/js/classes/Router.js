@@ -44,7 +44,7 @@ export class Router {
             document.querySelector('#main').innerHTML = newContent;
             this.toggleLoading();
             console.log("switching done");
-        }, 1000 * 1.5);
+        }, 1000 * 1);
 
     }
 }

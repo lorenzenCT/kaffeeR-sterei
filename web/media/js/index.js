@@ -6,7 +6,7 @@ let router = new Router(snippetsPath);
 function onNavItemClick(el, href) {
     el.addEventListener('click', (e) => {
         e.preventDefault();
-        console.log("on click ");
+        // console.log("on click ");
         router.readFile("_" + href, function (data) {
             router.switchContent(data);
         });
