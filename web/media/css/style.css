@@ -15,8 +15,9 @@
     display: inline-block;
     font-size: 32px;
     font-weight: bold;
-    padding: 8px;
-    margin-top: 16px;
+    padding-top: 8px;
+    //margin-top: 16px;
+    width: 100%;
 
 }
 
@@ -28,7 +29,8 @@ body {
 #logo-name {
     font-size: 32px;
     font-weight: bold;
-    margin: 16px;
+    // margin: 16px;
+    border-bottom: 1px solid black;
 }
 
 #navigation a {
