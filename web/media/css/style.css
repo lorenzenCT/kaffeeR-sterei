@@ -11,12 +11,12 @@
 
 #logo {
     color: #fff;
-    background-color: var(--gray);
+    background-color: var(--dark-orange);
     display: inline-block;
     font-size: 32px;
     font-weight: bold;
     padding-top: 8px;
-    //margin-top: 16px;
+    /* margin-top: 16px; */
     width: 100%;
 
 }
@@ -29,14 +29,18 @@ body {
 #logo-name {
     font-size: 32px;
     font-weight: bold;
-    // margin: 16px;
+    /* margin: 16px; */
     border-bottom: 1px solid black;
+    color: var(--dark-gray);
 }
 
+#navigation {
+    border-bottom: 1px solid black;
+}
 #navigation a {
     color: gray;
     padding: 8px;
-
+    text-decoration: none;
 }
 
 #navigation a:hover {
