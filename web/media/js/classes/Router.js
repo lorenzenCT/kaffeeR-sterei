@@ -36,7 +36,7 @@ export class Router {
         this.isLoading = !this.isLoading;
     }
 
-    switchContent(newContent, file) {
+    switchContent(newContent, file, delay=1) {
         console.log("switching content");
         this.toggleLoading();
         setTimeout(() => {
@@ -45,7 +45,7 @@ export class Router {
             this.toggleLoading();
             console.log("switching done");
             history.pushState({}, '', file);
-        }, 1000 * 1);
+        }, 1000 * delay);
 
     }
 }

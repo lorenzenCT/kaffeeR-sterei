@@ -6,7 +6,12 @@ let router = new Router(snippetsPath);
 
 history.pushState({}, '', 'home');
 
-function onNavItemClick(el, href) {
+router.readFile('_index.html', function(data){
+    router.switchContent(data, 'index', 0.1);
+
+});
+
+function onItemClick(el, href) {
     el.addEventListener('click', (e) => {
         e.preventDefault();
         // console.log("on click ");
@@ -18,7 +23,7 @@ function onNavItemClick(el, href) {
 }
 
 // set all nav links
-function setNavLinks() {
+function setClickableAnchorLinksWhichLoadsAnotherSnippet() {
     let a_items = document.querySelectorAll('a');
     let href = "";
 
@@ -27,11 +32,11 @@ function setNavLinks() {
     a_items.forEach((el) => {
         href = el.getAttribute('href');
         if (href) {
-            onNavItemClick(el, href);
+            onItemClick(el, href);
         }
     });
 
 
 }
 
-setNavLinks();
+setClickableAnchorLinksWhichLoadsAnotherSnippet();
