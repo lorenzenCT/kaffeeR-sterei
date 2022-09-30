@@ -6,8 +6,8 @@ let router = new Router(snippetsPath);
 
 history.pushState({}, '', 'home');
 
-router.readFile('_index.html', function(data){
-    router.switchContent(data, 'index', 0.1);
+router.readFile('_index.html', function (data) {
+    router.switchContent(data, 'index', 0.1, "none");
 
 });
 
