@@ -67,11 +67,10 @@ body {
 }
 
 #main h1, h2, h3 {
-    /* width: 800px; */
     margin: auto;
     text-align:center;
-    margin-bottom: 0.5em;
-    margin-top: 0.5em;
+    margin-bottom: 0.3em;
+    margin-top: 0.3em;
 }
 #main {
     /* width: 800px; */
@@ -102,6 +101,18 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+#main .container #image-text-container .button-container {
+    padding-top: 2.5em;
+    gap: 20px;
+    display: flex;
+}
+
+#main .container #image-text-container .button-container a {
+    line-height: 4;
+    width: 150px;
+    background-color: var(--orange);
 }
 
 #main .container #image-text-container .text-within-bg {
