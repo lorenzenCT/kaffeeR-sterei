@@ -3,9 +3,6 @@ import { Router } from './classes/Router.js';
 let snippetsPath = "media/snippets/";
 let router = new Router(snippetsPath);
 
-
-history.pushState({}, '', 'home');
-
 router.readFile('_index.html', function (data) {
     router.switchContent(data, 'index', 0.1, "none");
 
