@@ -1,0 +1,20 @@
+#logo-name {
+  font-size: 32px;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+  color: var(--dark-gray);
+}
+
+#navigation {
+  border-bottom: 1px solid black;
+
+  a {
+    color: gray;
+    padding: 8px;
+    text-decoration: none;
+
+    &:hover {
+      color: rgb(211, 70, 94);
+    }
+  }
+}
