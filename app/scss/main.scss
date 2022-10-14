@@ -66,7 +66,6 @@ $background-color_1: transparent;
 $background-color_2: var(--orange);
 
 #main {
-	.container {
 		#image-text-container {
 			.button-container {
 				padding-top: 2.5em;
@@ -91,5 +90,4 @@ $background-color_2: var(--orange);
 				}
 			}
 		}
-	}
 }
