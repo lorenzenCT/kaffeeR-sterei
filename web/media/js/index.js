@@ -20,9 +20,18 @@ if(existingFileRoute && validRoutes.includes(existingFileRoute)){
 function onItemClick(el, href) {
     el.addEventListener('click', (e) => {
         e.preventDefault();
+        removeActiveStateFromAllNavLis();
+        el.classList.add("active");
         router.readFile("_" + href, function (data) {
             router.switchContent(data, href.replace('.html', ''));
         });
+    });
+}
+
+function removeActiveStateFromAllNavLis(){
+    let all_lis = document.querySelectorAll('#navbar li a');
+    all_lis.forEach((el)=>{
+        el.classList.remove("active");
     });
 }
 
