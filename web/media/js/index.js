@@ -3,8 +3,6 @@ import { Router } from './classes/Router.js';
 let snippetsPath = "media/snippets/";
 let router = new Router(snippetsPath);
 
-console.log(location);
-
 const validRoutes = ['contact', 'events', 'farmers', 'impressum','index','latte_art','products']
 
 let existingFileRoute = router.checkForExistingPageInLocation();
