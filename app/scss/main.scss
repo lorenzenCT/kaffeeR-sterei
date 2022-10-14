@@ -60,3 +60,36 @@ body {
   width: 100%;
   height: 100%;
 }
+
+$color_1: white;
+$background-color_1: transparent;
+$background-color_2: var(--orange);
+
+#main {
+	.container {
+		#image-text-container {
+			.button-container {
+				padding-top: 2.5em;
+				gap: 20px;
+				display: flex;
+				a {
+					line-height: 4;
+					width: 150px;
+					background-color: $background-color_1;
+					border: 1px solid white;
+					text-decoration: none;
+					color: $color_1;
+					&:nth-child(1) {
+						background-color: $background-color_2;
+						border: 1px solid var(--orange);
+						&:hover {
+							background-color: $background-color_1;
+							border: 1px solid white;
+							transition: ease-in-out 0.5s;
+						}
+					}
+				}
+			}
+		}
+	}
+}
