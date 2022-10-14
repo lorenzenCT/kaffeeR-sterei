@@ -1,0 +1,62 @@
+:root {
+  --light-light-orange:#EEB58B;
+  --light-orange:#E99B63;
+  --orange:#D2691E;
+  --dark-orange:#824113;
+  --light-light-gray:#C5C5C5;
+  --light-gray:#AEAEAE;
+  --gray:#808080;
+  --dark-gray:#3B3B3B;
+}
+
+#logo {
+  color: #fff;
+  background-color: var(--dark-orange);
+  display: inline-block;
+  font-size: 32px;
+  font-weight: bold;
+  padding-top: 8px;
+
+  /* margin-top: 16px; */
+width: 100%;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+#image {
+  height: auto;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+#main h1, h2, h3 {
+  margin: auto;
+  text-align: center;
+  margin-bottom: 0.3em;
+  margin-top: 0.3em;
+}
+
+#main {
+  padding: 0 0;
+  margin: auto;
+  text-align: left;
+}
+
+#top {
+  text-align: center;
+}
+
+#main .container {
+  width: 100%;
+  height: 100%;
+}

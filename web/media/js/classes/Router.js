@@ -36,16 +36,27 @@ export class Router {
         this.isLoading = !this.isLoading;
     }
 
-    switchContent(newContent, file, delay=1) {
+    switchContent(newContent, file, delay=1, animation="default") {
         console.log("switching content");
-        this.toggleLoading();
+        if(animation === "default"){
+            this.toggleLoading();
+        }
         setTimeout(() => {
             // console.log(newContent);
             document.querySelector('#main').innerHTML = newContent;
-            this.toggleLoading();
+            if(animation === "default"){
+                this.toggleLoading();
+            }
             console.log("switching done");
             history.pushState({}, '', file);
         }, 1000 * delay);
 
+    }
+
+    checkForExistingPageInLocation(){
+        if(location.href.includes("/")){
+            let snippet = location.href.split("/")[3];
+            if(snippet) return snippet;
+        }
     }
 }

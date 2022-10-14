@@ -1,0 +1,54 @@
+$xs: 0px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+#main .container #image-text-container {
+  background-image: url("../img/sebastian-schuppik-H7xTpvBjJS4-unsplash-blur.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .button-container {
+    padding-top: 2.5em;
+    gap: 20px;
+    display: flex;
+
+    a {
+      line-height: 4;
+      width: 100px;
+      background-color: var(--orange);
+
+      @media screen and (min-width: $xs) and (max-width: $md)  {
+        background-color: red;
+      }
+
+      @media screen and (min-width: $md) and (max-width: $xl)  {
+        background-color: yellow;
+        width: 150px;
+      }
+
+      @media screen and (min-width: $xl)  {
+        background-color: green;
+      }
+    }
+  }
+
+.text-within-bg {
+    background: rgb(0, 0, 0, 0.5);
+    padding: 0 40px;
+    border-radius: 10px;
+  }
+
+h1 {
+    font-family: "quesha", sans-serif;
+    font-size: 5em;
+  }
+}
