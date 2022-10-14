@@ -52,4 +52,11 @@ export class Router {
         }, 1000 * delay);
 
     }
+
+    checkForExistingPageInLocation(){
+        if(location.href.includes("/")){
+            let snippet = location.href.split("/")[3];
+            if(snippet) return snippet;
+        }
+    }
 }
