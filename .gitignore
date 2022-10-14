@@ -5,3 +5,4 @@ node_modules
 node_modules
 package-lock.json
 .vscode
+./web/media/css/main.css
