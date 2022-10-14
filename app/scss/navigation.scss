@@ -3,7 +3,8 @@
 #navbar.navbar {
   background-color: $light-light-orange;
 
-  .navbar-brand {
+  li.nav-item a.active {
+    font-weight: bold;
   }
 }
 
