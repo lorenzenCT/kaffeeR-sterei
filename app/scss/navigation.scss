@@ -1,3 +1,12 @@
+@import './colors.scss';
+
+#navbar.navbar {
+  background-color: $light-light-orange;
+
+  .navbar-brand {
+  }
+}
+
 #logo-name {
   font-size: 32px;
   font-weight: bold;

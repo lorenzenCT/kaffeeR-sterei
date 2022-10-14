@@ -1,9 +1,10 @@
+
 #footer {
   text-align: center;
   color: gray;
   padding: 16px;
 }
-#main .container #image-text-container {
+#main #image-text-container {
   background-image: url("../img/sebastian-schuppik-H7xTpvBjJS4-unsplash-blur.jpg");
   background-size: cover;
   background-position: center;
@@ -14,40 +15,50 @@
   align-items: center;
   flex-direction: column;
 }
-#main .container #image-text-container .button-container {
+#main #image-text-container .button-container {
   padding-top: 2.5em;
   gap: 20px;
   display: flex;
 }
-#main .container #image-text-container .button-container a {
+#main #image-text-container .button-container a {
   line-height: 4;
   width: 100px;
   background-color: var(--orange);
 }
-@media screen and (min-width: 0px) and (max-width: 768px) {
-  #main .container #image-text-container .button-container a {
+@media screen and (max-width: 768px) {
+  #main #image-text-container .button-container a {
     background-color: red;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1200px) {
-  #main .container #image-text-container .button-container a {
+  #main #image-text-container .button-container a {
     background-color: yellow;
     width: 150px;
   }
 }
 @media screen and (min-width: 1200px) {
-  #main .container #image-text-container .button-container a {
+  #main #image-text-container .button-container a {
     background-color: green;
   }
 }
-#main .container #image-text-container .text-within-bg {
+#main #image-text-container .text-within-bg {
   background: rgba(0, 0, 0, 0.5);
   padding: 0 40px;
   border-radius: 10px;
 }
-#main .container #image-text-container h1 {
+#main #image-text-container h1 {
   font-family: "quesha", sans-serif;
-  font-size: 5em;
+  font-size: 3em;
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  #main #image-text-container h1 {
+    font-size: 5em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #main #image-text-container h1 {
+    background-color: green;
+  }
 }
 :root {
   --light-light-orange:#EEB58B;
@@ -109,6 +120,9 @@ body {
 #main .container {
   width: 100%;
   height: 100%;
+}
+#navbar.navbar {
+  background-color: #EEB58B;
 }
 #logo-name {
   font-size: 32px;
