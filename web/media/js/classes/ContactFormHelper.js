@@ -5,8 +5,17 @@ export class ContactFormHelper {
         this.storageHelper = new StorageHelper();
     }
 
-    registerForm(html_node, type = "contact") {
+    registerSignUpForm(html_node) { }
 
+    registerContactForm(html_node) {
+        html_node.addEventListener('submit', (e) => {
+            e.preventDefault();
+            console.log(e);
+
+            // get input fields
+
+            // store data
+        });
     }
 
     registerNewsletterForm(html_node) {
@@ -16,13 +25,11 @@ export class ContactFormHelper {
 
             let email = e.srcElement.querySelector('[name="email"]')?.value;
             if (!email) return;
-            
+
             let firstname = e.srcElement.querySelector('[name="firstname"]')?.value ?? '';
             let lastname = e.srcElement.querySelector('[name="lastname"]')?.value ?? '';
 
             let obj = { email, firstname, lastname };
-
-            console.log(obj);
 
             this.storageHelper.storeNewsletterSubscriber(obj);
         });

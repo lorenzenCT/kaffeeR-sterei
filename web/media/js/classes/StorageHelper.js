@@ -13,16 +13,21 @@ export class StorageHelper {
      */
     storeNewsletterSubscriber(data) {
         if (!data.email) return;
+        this.storeData("newsletter_subscribers", data.email, data);
+    }
+
+    
+    storeData(dataset, id, data) {
         let storage = window.localStorage;
 
-        // get current subs array and add new subscriber to it
-        let subs = storage.getItem("newsletter_subscribers") ?? [];
-        if (typeof (subs) === Array) {
-            subs.push(data);
-        }
+        // get current value and add new data to it
+        let raw = storage.getItem(dataset) || '{}';
+        let parsed = JSON.parse(raw);
+
+        // add onto obj @notice: parsed is not an array!
+        parsed[id] = data;
 
         // add back to storage
-        storage.setItem("newsletter_subscribers", subs);
-
+        storage.setItem(dataset, JSON.stringify(parsed));
     }
 }
