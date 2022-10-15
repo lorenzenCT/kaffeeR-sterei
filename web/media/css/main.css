@@ -80,17 +80,6 @@ a:hover, a:focus {
     background-color: green;
   }
 }
-:root {
-  --light-light-orange:#EEB58B;
-  --light-orange:#E99B63;
-  --orange:#D2691E;
-  --dark-orange:#824113;
-  --light-light-gray:#C5C5C5;
-  --light-gray:#AEAEAE;
-  --gray:#808080;
-  --dark-gray:#3B3B3B;
-}
-
 #logo {
   color: #fff;
   background-color: var(--dark-orange);
@@ -118,11 +107,12 @@ body {
   margin: auto;
   text-align: center;
   margin-bottom: 0.3em;
-  margin-top: 0.3em;
+  padding-top: 0.3em;
 }
 
 #content {
   padding: 0 10px;
+  background-color: #C5C5C5;
 }
 
 #main {
