@@ -21,42 +21,60 @@ $xxl: 1400px;
     gap: 20px;
     display: flex;
 
+    @media screen and (max-width: $sm) {
+      flex-direction: column;
+    }
+
     a {
+      position: relative;
       line-height: 4;
-      width: 100px;
-      background-color: var(--orange);
+      width: 180px;
+      height: 80px;
+      border-radius: 5px;
+      text-decoration: none;
+      color: white;
+      font-size: 1.2em;
+      background: linear-gradient(90deg, var(--orange) 0%, var(--light-orange) 100%);
+      z-index: 100;
 
-      @media screen and (max-width: $md)  {
-        background-color: red;
+      &:nth-child(2) {
+        background: linear-gradient(90deg, var(--light-orange) 0%, var(--orange) 100%);
       }
 
-      @media screen and (min-width: $md) and (max-width: $xl)  {
-        background-color: yellow;
-        width: 150px;
+      &:before {
+        border-radius: inherit;
+        background: var(--orange);
+        color: white;
+        content: '';    
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: 0; left: 0;
+        opacity: 0;
+        width: 100%;
+        z-index: -100;
+        transition: 400ms ease-in-out;
       }
 
-      @media screen and (min-width: $xl)  {
-        background-color: green;
+      &:hover {
+        &:before {
+          opacity: 1;
+        }
       }
     }
   }
 
-.text-within-bg {
-    background: rgb(0, 0, 0, 0.5);
+  .text-within-bg {
     padding: 0 40px;
     border-radius: 10px;
   }
 
-h1 {
+  h1 {
     font-family: "quesha", sans-serif;
-    font-size: 3em;
+    font-size: 4em;
 
-    @media screen and (min-width: $md) and (max-width: $xl)  {
-      font-size: 5em;
-    }
-
-    @media screen and (min-width: $xl)  {
-      background-color: green;
+    @media screen and (min-width: $md) {
+      font-size: 5.5em;
     }
   }
 }

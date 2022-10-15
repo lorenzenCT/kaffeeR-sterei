@@ -36,7 +36,7 @@ export class Router {
         this.isLoading = !this.isLoading;
     }
 
-    switchContent(newContent, file, delay=1, animation="default") {
+    switchContent(newContent, file, delay=0, animation="default") {
         console.log("switching content");
         if(animation === "default"){
             this.toggleLoading();
