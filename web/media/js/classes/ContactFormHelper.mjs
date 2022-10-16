@@ -1,4 +1,4 @@
-import { StorageHelper } from "./StorageHelper.js";
+import { StorageHelper } from "./StorageHelper.mjs";
 
 export class ContactFormHelper {
     constructor() {

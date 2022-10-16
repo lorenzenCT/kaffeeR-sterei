@@ -1,5 +1,5 @@
 import { Navbar } from "./classes/Navbar.mjs"
-import { ContactFormHelper } from "./classes/ContactFormHelper"
+import { ContactFormHelper } from "./classes/ContactFormHelper.mjs"
 
 function loadLinksAndAddListeners() {
     document.querySelectorAll("#main * a")
