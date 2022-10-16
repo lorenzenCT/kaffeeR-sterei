@@ -20,10 +20,11 @@
     <nav id="navbar" class="navbar navbar-expand-sm" aria-label="Third navbar example">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html"><img width="45" src="media/img/logo.svg" alt="" /></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03"
-                aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapsable" aria-controls="navbarCollapsable" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
             <div class="collapse navbar-collapse" id="navbarsExample03">
                 <ul class="navbar-nav me-auto mb-2 mb-sm-0">
@@ -52,10 +53,6 @@
         </div>
     </nav>
 
-    <!-- -->
-
-    </div>
-
     <div id="main" class="container-fluid">
 
     </div>
@@ -73,30 +70,30 @@
                     <div class="col-lg-2 col-md-6">
                         <h5 class="text-white mb-3">Quick links</h5>
                         <ul class="list-unstyled text-muted">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Impressum</a></li>
-                            <li><a href="#">Kontakt</a></li>
-                            <li><a href="#">Placeholder</a></li>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="impressum.html">Impressum</a></li>
+                            <li><a href="contact.html">Kontakt</a></li>
+                            <li><a href="index.html">Placeholder</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-2 col-md-6">
                         <h5 class="text-white mb-3">Quick links</h5>
                         <ul class="list-unstyled text-muted">
-                            <li><a href="#">Produkte</a></li>
-                            <li><a href="#">Direct Trade</a></li>
-                            <li><a href="#">Latte Art</a></li>
-                            <li><a href="#">Veranstaltungen</a></li>
+                            <li><a href="products.html">Produkte</a></li>
+                            <li><a href="farmers.html">Direct Trade</a></li>
+                            <li><a href="latte_art.html">Latte Art</a></li>
+                            <li><a href="events.html">Veranstaltungen</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <h5 class="text-white mb-3">Newsletter</h5>
                         <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                             eiusmod tempor incididunt.</p>
-                        <form action="#">
+                        <form action="#" id="footer-newsletter">
                             <div class="input-group mb-3">
-                                <input class="form-control text-white" type="text" placeholder="Email"
-                                    aria-label="Empfänger" aria-describedby="button-send">
-                                <button class="btn btn-primary" id="button-send" type="button"><i
+                                <input class="form-control text-white" type="email" placeholder="Email"
+                                    aria-label="Empfänger" aria-describedby="button-send" name="email">
+                                <button class="btn btn-primary" id="button-send" type="submit"><i
                                         class="bi bi-check-circle-fill"></i></button>
                             </div>
                         </form>

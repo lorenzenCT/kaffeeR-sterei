@@ -1,4 +1,5 @@
 import { Navbar } from "./classes/Navbar.mjs"
+import { ContactFormHelper } from "./classes/ContactFormHelper"
 
 function loadLinksAndAddListeners() {
     document.querySelectorAll("#main * a")
@@ -33,4 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // load initial
     new Navbar("index").load(loadLinksAndAddListeners)
-}) 
+    
+    const contactFormHelper = new ContactFormHelper();
+    const footer_newsletter = document.querySelector('#footer-newsletter');
+    contactFormHelper.registerNewsletterForm(footer_newsletter);
+})
+
