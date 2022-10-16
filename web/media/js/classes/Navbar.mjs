@@ -1,3 +1,4 @@
+import { ProductLoader } from "./ProductLoader.mjs"
 import { Router } from "./Router.mjs"
 
 const snippetsPath = "media/snippets/"
@@ -42,7 +43,9 @@ const routes = {
         "name": "products",
         "nav-element": document.querySelector("#navbar li a.products"),
         "path": `${snippetsPath}_products.html`,
-        "callback": function () { }
+        "callback": function () { 
+            ProductLoader.load()
+        }
     }
 }
 
@@ -54,6 +57,7 @@ export class Navbar {
         if (typeof route === "string") {
             const _route = routes[route] || routes[this.parseRoute(route)]
 
+            console.log(_route)
             if (_route) {
                 this.route = _route
             } else {
@@ -99,6 +103,7 @@ export class Navbar {
 
         router.readFile(this.route.path, (data) => {
             router.switchContent(data, this.route.name, 0, "default", () => {
+                this.route.callback()
                 cb()
             })
         })

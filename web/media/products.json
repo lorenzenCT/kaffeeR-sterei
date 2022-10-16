@@ -1,0 +1,52 @@
+[
+    {
+        "id": "1",
+        "name": "Duna Dimaa Kaffee - ganze Bohne",
+        "price": "8,90 €",
+        "amount": "250g",
+        "description": "",
+        "flavour": "Geröstete Nüsse, Kakao",
+        "stock": "175",
+        "img": "media/img/jon-tyson-KRedbshBxEk-unsplash.jpg"
+    },
+    {
+        "id": "2",
+        "name": "Saribu Kaffee",
+        "price": "10,90 €",
+        "amount": "250g",
+        "description": "",
+        "flavour": "Schokolade, Zimt",
+        "stock": "12",
+        "img": "media/img/jon-tyson-KRedbshBxEk-unsplash.jpg"
+    },
+    {
+        "id": "3",
+        "name": "Saribu Kaffee",
+        "price": "36,90 €",
+        "amount": "1kg",
+        "description": "",
+        "flavour": "Schokolade, Zimt",
+        "stock": "89",
+        "img": "media/img/jon-tyson-KRedbshBxEk-unsplash.jpg"
+    },
+    {
+        "id": "4",
+        "name": "Moleyo Kaffee",
+        "price": "9,90 €",
+        "amount": "250g",
+        "description": "",
+        "flavour": "Kakao, Muskatnuss",
+        "stock": "0",
+        "img": "media/img/jon-tyson-KRedbshBxEk-unsplash.jpg"
+    },
+    {
+        "id": "5",
+        "name": "Terrado Kaffee & Espresso",
+        "price": "21,80 €",
+        "amount": "500g",
+        "description": "",
+        "flavour": "Haselnuss, süße Früchte",
+        "stock": "191",
+        "img": "media/img/jon-tyson-KRedbshBxEk-unsplash.jpg"
+    }
+]
