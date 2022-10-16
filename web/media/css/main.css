@@ -1,0 +1,225 @@
+
+#footer {
+  text-align: center;
+  color: gray;
+  padding: 16px;
+  background: #212529;
+}
+
+.form-control {
+  background: #212529;
+  border-color: #545454;
+}
+
+.form-control:focus {
+  background: #212529;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}
+#main .image-text-container {
+  background-image: url("../img/sebastian-schuppik-H7xTpvBjJS4-unsplash-blur.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  height: calc(100vh - 71px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#main .image-text-container .button-container {
+  padding-top: 2.5em;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  #main .image-text-container .button-container {
+    flex-direction: row;
+  }
+}
+#main .image-text-container .button-container a {
+  line-height: 4;
+  width: 180px;
+  height: 80px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+  transition: 200ms ease-in-out;
+  border: 1px solid white;
+  font-weight: 700;
+}
+#main .image-text-container .button-container a:hover, #main .image-text-container .button-container a:active {
+  background: white;
+  color: black;
+}
+#main .image-text-container .text-within-bg {
+  padding: 0 40px;
+  border-radius: 10px;
+}
+#main .image-text-container h1 {
+  font-family: "quesha", sans-serif;
+  font-size: 4em;
+}
+@media screen and (min-width: 768px) {
+  #main .image-text-container h1 {
+    font-size: 5.5em;
+  }
+}
+#main .content {
+  display: flex;
+  margin: 10em 5em;
+  flex: 1 1 50%;
+  align-items: center;
+  flex-direction: column;
+  gap: 4em;
+}
+@media screen and (min-width: 992px) {
+  #main .content {
+    margin: 13em 10em;
+  }
+}
+@media screen and (min-width: 992px) {
+  #main .content {
+    margin: 15em 15em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #main .content {
+    flex-direction: row;
+  }
+}
+#main .content div {
+  width: 100%;
+  height: 100%;
+}
+#main .content .text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#main .content .text-container img {
+  padding: 20px 0;
+}
+#main .content .text-container h2 {
+  font-family: "quesha, sans-serif";
+  margin: 0 0;
+}
+#main .content .img-container {
+  display: none;
+}
+#main .content .img-container img {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 768px) {
+  #main .content .img-container img {
+    min-height: 430px;
+    min-width: 370px;
+    max-width: 500px;
+    max-height: 600px;
+  }
+}
+@media screen and (min-width: 768px) {
+  #main .content .img-container {
+    display: block;
+  }
+}
+:root {
+  --light-light-orange:#EEB58B;
+  --light-orange:#E99B63;
+  --orange:#D2691E;
+  --dark-orange:#824113;
+  --light-light-gray:#C5C5C5;
+  --light-gray:#AEAEAE;
+  --gray:#808080;
+  --dark-gray:#3B3B3B;
+}
+
+#logo {
+  color: #fff;
+  background-color: var(--dark-orange);
+  display: inline-block;
+  font-size: 32px;
+  font-weight: bold;
+  padding-top: 8px;
+  /* margin-top: 16px; */
+  width: 100%;
+}
+
+body {
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+#image {
+  height: auto;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+#main h1, h2, h3 {
+  margin: auto;
+  text-align: center;
+  margin-bottom: 0.3em;
+  margin-top: 0.3em;
+}
+
+#content {
+  padding: 0 10px;
+}
+
+#main {
+  padding: 0 0;
+  margin: auto;
+  text-align: left;
+}
+
+#top {
+  text-align: center;
+}
+
+#main .container {
+  width: 100%;
+}
+#navbar.navbar {
+  background-color: #EEB58B;
+}
+#navbar.navbar li.nav-item a.active {
+  font-weight: bold;
+}
+
+#logo-name {
+  font-size: 32px;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+  color: var(--dark-gray);
+}
+
+#navigation {
+  border-bottom: 1px solid black;
+}
+#navigation a {
+  color: gray;
+  padding: 8px;
+  text-decoration: none;
+}
+#navigation a:hover {
+  color: rgb(211, 70, 94);
+}
+/* Loader CSS */
+.loader {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+}

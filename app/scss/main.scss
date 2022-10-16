@@ -21,9 +21,6 @@
 width: 100%;
 }
 
-html {
-}
-
 body {
   width: 100%;
   font-family: Arial, Helvetica, sans-serif;
@@ -60,61 +57,3 @@ body {
 #main .container {
   width: 100%;
 }
-
-// $color_1: white;
-// $background-color_1: transparent;
-// $background-color_2: var(--orange);
-// $font-family_1: "quesha", sans-serif;
-
-// #main {
-// 		#image-text-container {
-// 			.button-container {
-// 				padding-top: 2.5em;
-// 				gap: 20px;
-// 				display: flex;
-// 				a {
-// 					line-height: 4;
-// 					width: 150px;
-// 					background-color: $background-color_1;
-// 					border: 1px solid white;
-// 					text-decoration: none;
-// 					color: $color_1;
-// 					&:nth-child(1) {
-// 						background-color: $background-color_2;
-// 						border: 1px solid var(--orange);
-// 						&:hover {
-// 							background-color: $background-color_1;
-// 							border: 1px solid white;
-// 							transition: ease-in-out 0.5s;
-// 						}
-// 					}
-//           &:nth-child(2):hover {
-//             background-color: $background-color_2;
-//             border: 1px solid $background-color_2;
-//             transition: ease-in-out 0.5s;
-// 					}
-// 				}
-// 			}
-// 		}
-
-//     #image-text-container {
-// 			background-image: url("../img/sebastian-schuppik-H7xTpvBjJS4-unsplash-blur.jpg");
-// 			background-size: cover;
-// 			background-position: center;
-// 			color: $color_1;
-// 			height: 600px;
-// 			display: flex;
-// 			justify-content: center;
-// 			align-items: center;
-// 			flex-direction: column;
-// 			.text-within-bg {
-// 				background: rgb(0,0,0,0.5);
-// 				padding: 0 40px;
-// 				border-radius: 10px;
-// 			}
-// 			h1 {
-// 				font-family: $font-family_1;
-// 				font-size: 5em;
-// 			}
-// 		}
-// }
