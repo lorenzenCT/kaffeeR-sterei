@@ -157,6 +157,7 @@ body #main section .items .item {
   margin: 0 1em 2em 1em;
   width: calc(100% - 2em);
   max-width: 320px;
+  border-radius: 5px;
 }
 @media screen and (min-width: 768px) {
   body #main section .items .item {

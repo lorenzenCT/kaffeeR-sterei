@@ -31,6 +31,7 @@ body {
         margin: 0 1em 2em 1em;
         width: calc(100% - 2em);
         max-width: 320px;
+        border-radius: 5px;
 
         @media screen and (min-width: $md) {
           width: calc(50% - 2em);
