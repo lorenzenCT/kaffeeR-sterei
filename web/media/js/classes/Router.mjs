@@ -1,19 +1,17 @@
 export class Router {
 
-    constructor(snippetsPath) {
-        this.snippetsPath = snippetsPath;
+    constructor() {
         this.isLoading = false;
     }
 
     readFile(file, cb) {
-        var rawFile = new XMLHttpRequest();
-        console.log(this.snippetsPath + file);
-        rawFile.open("GET", this.snippetsPath + file, false);
+        const rawFile = new XMLHttpRequest()
+        rawFile.open("GET", file, false);
         rawFile.onreadystatechange = function () {
             if (rawFile.readyState === 4) {
                 if (rawFile.status === 200 || rawFile.status == 0) {
-                    var allText = rawFile.responseText;
-                    cb(allText);
+                    const data = rawFile.responseText;
+                    cb(data);
                 }
             }
         }
@@ -36,7 +34,7 @@ export class Router {
         this.isLoading = !this.isLoading;
     }
 
-    switchContent(newContent, file, delay=0, animation="default") {
+    switchContent(newContent, file, delay=0, animation="default", cb) {
         console.log("switching content");
         if(animation === "default"){
             this.toggleLoading();
@@ -49,6 +47,8 @@ export class Router {
             }
             console.log("switching done");
             history.pushState({}, '', file);
+
+            cb()
         }, 1000 * delay);
 
     }
