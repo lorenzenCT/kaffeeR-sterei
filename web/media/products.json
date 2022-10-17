@@ -48,5 +48,36 @@
         "flavour": "Haselnuss, süße Früchte",
         "stock": "191",
         "img": "media/img/jon-tyson-KRedbshBxEk-unsplash.jpg"
+    },
+    {
+        "id": "6",
+        "name": "Test Kaffee",
+        "price": "69,00 €",
+        "amount": "500g",
+        "description": "",
+        "flavour": "Schokoldae",
+        "stock": "29",
+        "img": "media/img/jon-tyson-KRedbshBxEk-unsplash.jpg"
+    },
+    {
+        "id": "7",
+        "name": "Test Kaffee",
+        "price": "69,00 €",
+        "amount": "500g",
+        "description": "",
+        "flavour": "Schokoldae",
+        "stock": "29",
+        "img": "media/img/jon-tyson-KRedbshBxEk-unsplash.jpg"
+    },
+    {
+        "id": "8",
+        "name": "Test Kaffee",
+        "price": "69,00 €",
+        "amount": "500g",
+        "description": "",
+        "flavour": "Schokoldae",
+        "stock": "29",
+        "img": "media/img/jon-tyson-KRedbshBxEk-unsplash.jpg"
     }
+
 ]

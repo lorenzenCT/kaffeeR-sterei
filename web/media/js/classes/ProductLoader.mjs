@@ -7,7 +7,7 @@ export class ProductLoader {
 
         products.forEach((value) => {
             result += `
-<div class="item col mb-5">
+<div id="product-item-${value.id}" class="item col mb-5">
     <div class="display">
         <img src="${value.img}" alt="">
     </div>
@@ -17,11 +17,14 @@ export class ProductLoader {
             <p>${value.price} / ${value.amount}</p>
             <p>${value.flavour}</p>
         </div>
-        <div class="additional-information hidden" style="display: none;">
+        <div id="additional-information-${value.id}" class="additional-information collapse">
             <p${Number(value.stock) < 20 ? ' style="color: red;"' : ' style="color: green;"'}>${value.stock} verfügbar</p>
         </div>
         <div class="more-information">
-            <button class="btn btn-outline-dark mt-auto">Mehr</button>
+	    <a data-bs-toggle="collapse" href="#additional-information-${value.id}" role="button" aria-expanded="false" aria-controls="additional-information" class="btn btn-outline-dark mt-auto">
+	    	<span class="collapsed">Mehr</span>
+		<span class="expanded">Weniger</span>
+	    </a>
         </div>
     </div>
 </div>
@@ -34,7 +37,7 @@ export class ProductLoader {
 
     static addListeners() {
         const buttons = document.querySelectorAll("#main .items .item .information .more-information button")
-
+	buttons = []
         buttons.forEach((button) => {
             button.addEventListener("click", (event) => {
                 const button = event.target 
