@@ -5,7 +5,7 @@ const snippetsPath = "media/snippets/"
 const routes = {
     'contact': {
         "name": "contact",
-        "nav-element": document.querySelector("#navbar li a.contact"),
+        "nav-element": document.querySelector("#navbar li a[data-routename='contact']"),
         "path": `${snippetsPath}_contact.html`,
         "callback": function () { }
     },
