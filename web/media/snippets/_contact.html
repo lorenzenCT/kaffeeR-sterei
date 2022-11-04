@@ -1,6 +1,32 @@
-<section class="container" id="Crop">
-    <h2>Kontaktiere uns...</h2>
-    <p>Du hast eine Frage, Anregung oder möchtest einen Platz reservieren. Kein Problem. Ruf einfach durch oder schreibe uns eine Mail: </p>
-    <p>Tel.: 0551 - 0815</p>
-    <p>Mail: info[at]bleecker-street.de</p>
+<section class="container-fluid px-0" id="contact">
+    <div class="contact">
+        <h2>Kontaktiere uns...</h2>
+        <p>Du hast eine Frage, Anregung oder möchtest einen Platz reservieren. Kein Problem. Ruf einfach durch oder schreibe uns eine Mail: </p>
+        <p>Tel.: 0551 - 0815</p>
+        <p>Mail: info[at]bleecker-street.de</p>
+    </div>
+    <div class="formular">
+        <div class="name">
+            <select name="Anrede">
+                <option disabled selected> </option>
+                <option value="herr">Herr</option>
+                <option value="frau">Frau</option>
+                <option value="none">None</option>
+            </select>
+            <input type="text" name="name" placeholder="Name">
+        </div>
+        <div class="mail">
+            <input type="email" name="mail" placeholder="E-Mail">
+        </div>
+        <div class="number">
+            <input type="text" name="number" placeholder="Telefon">
+        </div>
+        <div class="text">
+            <input type="text" name="message" placeholder="Nachricht">
+        </div>
+        <div class="submit">
+            <button></button>
+            <input type="checkbox" name="newsletter">
+        </div>
+    </div>
 </section>
