@@ -1,0 +1,194 @@
+@import "../sizes.scss";
+@import "../colors.scss";
+
+section#contact {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: $md) {
+        flex-wrap: nowrap;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2em;
+        justify-content: center;
+        // background-color: aqua;
+        width: 100%;
+        padding: 5em 4em;
+
+        @media screen and (min-width: $md) {
+            width: 55%;
+            padding: 6em;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+
+        h3 {
+            font-weight: 700;
+        }
+        
+        .wrapper {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+
+            i {
+                padding-right: 2em;
+            }
+        }
+    }
+
+    .wrapper {
+        position: relative;
+        width: 100%;
+
+        @media screen and (min-width: $md) {
+            width: 45%;
+        }
+
+        .cube {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: 10%;
+            left: -25px;
+            transform: rotate(45deg);
+            background-color: var(--light-orange);
+        }
+    }
+
+    .formular {
+        background-color: var(--light-orange);
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        row-gap: 0.7em;
+        justify-content: center;
+        align-items: center;
+        padding: 5em 4em;
+
+        @media screen and (min-width: $xl) {
+            padding: 5em calc((100% - 500px) / 2);
+        }
+
+        input {
+            background: none;
+            border: none;
+            outline: none;
+            width: 100%;
+            height: 100%;
+        }
+
+        i {
+            padding: 0 0.7em;
+            color: white;
+        }
+
+        ::-webkit-input-placeholder, ::placeholder {
+            color: white;
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid white;
+            border-radius: 5px;
+            height: 3em;
+            width: 100%;
+        }
+
+        .text.wrapper {
+            position: relative;
+            height: 150px;
+            padding: 1em;
+
+            textarea {
+                overflow-y: scroll;
+                word-wrap: break-word;
+                resize: none;
+                background: none;
+                border: none;
+                width: 100%;
+                height: 100%;
+                outline: none;
+                scrollbar-width: none;
+    
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+            }
+
+            .info {
+                position: absolute;
+                bottom: 0;
+                right: 6px;
+                font-size: 13px;
+                color: white;
+            }
+        }
+
+        .name {
+            display: flex;
+            width: 100%;
+            gap: 0.7em;
+
+            .salutation-container.wrapper {
+                width: 4em;
+                
+                select {
+                    width: 100%;
+                    height: 100%;
+                    background: none;
+                    border: none;
+                    outline: none;
+                    appearance: none;
+                    text-align: center;
+                }
+            }
+        }
+
+        .submit {
+            border-radius: 50px;
+            margin-top: 2em;
+
+            &:hover, &:active {
+                transition: ease-in-out 200ms;
+                background-color: white;
+            }
+
+            button {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                background: none;
+                border: none;
+                outline: none;
+                appearance: none;
+                color: white;
+
+                &:hover, &:active {
+                    color: black;
+                    
+                    i {
+                        display: block;
+                    }
+                }
+
+                i {
+                    display: none;
+                    position: absolute;
+                    top: 50%;
+                    right: 10%;
+                    transform: translate(-50%, -50%);
+                    color: black;
+                }
+            }
+        }
+    }
+}

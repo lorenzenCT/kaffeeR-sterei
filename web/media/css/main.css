@@ -261,11 +261,181 @@ body #main section .items .item .information .more-information a[aria-expanded=t
 #navigation a:hover {
   color: rgb(211, 70, 94);
 }
+
 /* Loader CSS */
 .loader {
   position: absolute;
   top: 45%;
   left: 45%;
+}
+section#contact {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 768px) {
+  section#contact {
+    flex-wrap: nowrap;
+  }
+}
+section#contact .contact {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+  justify-content: center;
+  width: 100%;
+  padding: 5em 4em;
+}
+@media screen and (min-width: 768px) {
+  section#contact .contact {
+    width: 55%;
+    padding: 6em;
+  }
+}
+section#contact .contact p {
+  margin-bottom: 0;
+}
+section#contact .contact h3 {
+  font-weight: 700;
+}
+section#contact .contact .wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+section#contact .contact .wrapper i {
+  padding-right: 2em;
+}
+section#contact .wrapper {
+  position: relative;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  section#contact .wrapper {
+    width: 45%;
+  }
+}
+section#contact .wrapper .cube {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 10%;
+  left: -25px;
+  transform: rotate(45deg);
+  background-color: var(--light-orange);
+}
+section#contact .formular {
+  background-color: var(--light-orange);
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  row-gap: 0.7em;
+  justify-content: center;
+  align-items: center;
+  padding: 5em 4em;
+}
+@media screen and (min-width: 1200px) {
+  section#contact .formular {
+    padding: 5em calc((100% - 500px) / 2);
+  }
+}
+section#contact .formular input {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+}
+section#contact .formular i {
+  padding: 0 0.7em;
+  color: white;
+}
+section#contact .formular ::-webkit-input-placeholder, section#contact .formular ::placeholder {
+  color: white;
+}
+section#contact .formular .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 5px;
+  height: 3em;
+  width: 100%;
+}
+section#contact .formular .text.wrapper {
+  position: relative;
+  height: 150px;
+  padding: 1em;
+}
+section#contact .formular .text.wrapper textarea {
+  overflow-y: scroll;
+  word-wrap: break-word;
+  resize: none;
+  background: none;
+  border: none;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  scrollbar-width: none;
+}
+section#contact .formular .text.wrapper textarea::-webkit-scrollbar {
+  display: none;
+}
+section#contact .formular .text.wrapper .info {
+  position: absolute;
+  bottom: 0;
+  right: 6px;
+  font-size: 13px;
+  color: white;
+}
+section#contact .formular .name {
+  display: flex;
+  width: 100%;
+  gap: 0.7em;
+}
+section#contact .formular .name .salutation-container.wrapper {
+  width: 4em;
+}
+section#contact .formular .name .salutation-container.wrapper select {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  appearance: none;
+  text-align: center;
+}
+section#contact .formular .submit {
+  border-radius: 50px;
+  margin-top: 2em;
+}
+section#contact .formular .submit:hover, section#contact .formular .submit:active {
+  transition: ease-in-out 200ms;
+  background-color: white;
+}
+section#contact .formular .submit button {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  appearance: none;
+  color: white;
+}
+section#contact .formular .submit button:hover, section#contact .formular .submit button:active {
+  color: black;
+}
+section#contact .formular .submit button:hover i, section#contact .formular .submit button:active i {
+  display: block;
+}
+section#contact .formular .submit button i {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translate(-50%, -50%);
+  color: black;
 }
 section .events {
   background-color: red;
