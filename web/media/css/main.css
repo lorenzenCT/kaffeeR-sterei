@@ -267,3 +267,6 @@ body #main section .items .item .information .more-information a[aria-expanded=t
   top: 45%;
   left: 45%;
 }
+section .events {
+  background-color: red;
+}

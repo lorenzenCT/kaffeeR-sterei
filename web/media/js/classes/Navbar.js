@@ -1,5 +1,5 @@
-import { ProductLoader } from "./ProductLoader.mjs"
-import { Router } from "./Router.mjs"
+import { ProductLoader } from "./ProductLoader.js"
+import { Router } from "./Router.js"
 
 const snippetsPath = "media/snippets/"
 const routes = {
@@ -11,7 +11,7 @@ const routes = {
     },
     'events': {
         "name": "events",
-        "nav-element": document.querySelector("#navbar li a.events"),
+        "nav-element": document.querySelector("#navbar li a[data-routename='events']"),
         "path": `${snippetsPath}_events.html`,
         "callback": function () { }
     },
@@ -50,8 +50,6 @@ const routes = {
 }
 
 export class Navbar {
-
-    route
 
     constructor(route) {
         if (typeof route === "string") {

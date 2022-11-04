@@ -36,8 +36,7 @@ export class ProductLoader {
     }
 
     static addListeners() {
-        const buttons = document.querySelectorAll("#main .items .item .information .more-information button")
-	buttons = []
+        const buttons = document.querySelectorAll("#main .items .item .information .more-information button") || [];
         buttons.forEach((button) => {
             button.addEventListener("click", (event) => {
                 const button = event.target 
