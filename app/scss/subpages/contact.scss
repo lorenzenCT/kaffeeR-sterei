@@ -69,7 +69,7 @@ section#contact {
         flex-direction: column;
         row-gap: 0.7em;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         padding: 5em 4em;
 
         @media screen and (min-width: $xl) {
@@ -101,6 +101,10 @@ section#contact {
             border-radius: 5px;
             height: 3em;
             width: 100%;
+
+            &.invalid {
+                border: 1px solid red;
+            }
         }
 
         .text.wrapper {
@@ -150,6 +154,20 @@ section#contact {
                     appearance: none;
                     text-align: center;
                 }
+            }
+        }
+
+        .newsletter {
+            display: flex;
+
+            input {
+                width: 20px;
+                height: 20px;
+                margin-right: 1em;
+            }
+
+            p {
+                color: white;
             }
         }
 

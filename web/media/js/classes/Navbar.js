@@ -1,3 +1,4 @@
+import { ContactHelper } from "./ContactHelper.js"
 import { ProductLoader } from "./ProductLoader.js"
 import { Router } from "./Router.js"
 
@@ -8,13 +9,10 @@ const routes = {
         "nav-element": document.querySelector("#navbar li a[data-routename='contact']"),
         "path": `${snippetsPath}_contact.html`,
         "callback": function () {
-            const textarea = document.querySelector("#contact textarea")
-            const info = document.querySelector("#contact .text.wrapper .info")
-
-            console.log(textarea, info)
-
-            info.textContent = `${textarea.value.length}/512`
-            textarea.addEventListener('input', (e) => info.textContent = `${e.target.value.length}/512`)
+            const helper = new ContactHelper()
+            
+            helper.initCharCounter()
+            helper.initValidator()
         }
     },
     'events': {
