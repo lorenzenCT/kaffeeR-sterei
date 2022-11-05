@@ -17,7 +17,7 @@ body {
       font-family: "quesha", sans-serif;
       font-size: 3em;
 
-      
+
       @media screen and (min-width: $md) {
         font-size: 4em;
       }
@@ -55,12 +55,12 @@ body {
           justify-content: center;
           align-items: center;
           background: var(--light-light-gray);
-          
+
           img {
             object-fit: fill;
           }
         }
-  
+
         .information {
           display: flex;
           flex-direction: column;
@@ -85,36 +85,37 @@ body {
               font-weight: bolder;
             }
           }
-  
-          .additional-information {
-	    opacity: 0;
 
-	    &.show {
-    		display: flex;
-            	flex-direction: row;
-            	flex-wrap: wrap;
-            	justify-content: center;
-            	padding: 0 1.5em;
-		opacity: 1;
-	    }
+          .additional-information {
+            opacity: 0;
+
+            &.show {
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap;
+              justify-content: center;
+              padding: 0 1.5em;
+              opacity: 1;
+            }
 
             p {
               margin: 0;
             }
           }
-  
+
           .more-information {
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 0.75em 1.5em 1.5em 1.5em;
 
-	    a[aria-expanded=false] .expanded {
-		display: none;
-	}
-	a[aria-expanded=true] .collapsed {
-		display: none;
-	}
+            a[aria-expanded=false] .expanded {
+              display: none;
+            }
+
+            a[aria-expanded=true] .collapsed {
+              display: none;
+            }
           }
         }
       }

@@ -107,7 +107,7 @@ a:hover, a:focus {
   justify-content: center;
   flex-direction: column;
 }
-#main .content .text-container img {
+#main .content .text-container i {
   padding: 20px 0;
 }
 #main .content .text-container h2 {
