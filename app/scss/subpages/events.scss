@@ -2,15 +2,18 @@ section .events {
     //background-color: coral;
 
     .row {
-        height: 17rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
 
     .event {
         .card {
             min-width: 10rem;
-        }
+            min-height: 19rem;
 
-        height: 20rem;
+            .buttons {
+                position: absolute;
+                bottom: 1.5rem;
+            }
+        }
     }
 }

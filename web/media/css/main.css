@@ -454,12 +454,13 @@ section#contact .formular .submit button i {
   color: black;
 }
 section .events .row {
-  height: 17rem;
-  margin-bottom: 2rem;
-}
-section .events .event {
-  height: 20rem;
+  margin-bottom: 1rem;
 }
 section .events .event .card {
   min-width: 10rem;
+  min-height: 19rem;
+}
+section .events .event .card .buttons {
+  position: absolute;
+  bottom: 1.5rem;
 }
