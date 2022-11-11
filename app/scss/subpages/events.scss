@@ -1,18 +1,48 @@
 section .events {
-    //background-color: coral;
-
-    .row {
-        margin-bottom: 1rem;
-    }
 
     .event {
+        margin-bottom: 1em;
+
         .card {
             min-width: 10rem;
-            min-height: 19rem;
 
             .buttons {
-                position: absolute;
-                bottom: 1.5rem;
+                display: flex;
+                gap: 10px;
+
+                button {
+                    width: 60%;
+                }
+
+                p, a {
+                    width: 50%;
+                    text-align: center;
+                    line-height: 2;
+                    align-self: center;
+                }
+            }
+
+            @media screen and (min-width: 576px) {
+                min-height: 14rem;
+            }
+
+            @media screen and (min-width: 768px) {
+                min-height: 17rem;
+
+                .buttons {
+                    position: absolute;
+                    bottom: 1rem;
+                    gap: 20px;
+                    align-items: center;
+
+                    button {
+                        width: unset;
+                    }
+
+                    a {
+                        width: unset;
+                    }
+                }
             }
         }
     }
