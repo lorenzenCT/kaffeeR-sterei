@@ -408,16 +408,18 @@ section#contact .formular .name .salutation-container.wrapper select {
   appearance: none;
   text-align: center;
 }
-section#contact .formular .newsletter {
+section#contact .formular .newsletter, section#contact .formular .dsgvo {
   display: flex;
+  align-items: center;
 }
-section#contact .formular .newsletter input {
-  width: 20px;
-  height: 20px;
+section#contact .formular .newsletter input, section#contact .formular .dsgvo input {
+  width: 15px;
+  height: 15px;
   margin-right: 1em;
 }
-section#contact .formular .newsletter p {
+section#contact .formular .newsletter p, section#contact .formular .dsgvo p {
   color: white;
+  margin-bottom: 0;
 }
 section#contact .formular .submit {
   border-radius: 50px;
