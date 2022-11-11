@@ -7,7 +7,7 @@ export class ProductLoader {
 
         products.forEach((value) => {
             result += `
-<div id="product-item-${value.id}" class="item col mb-5">
+<div id="product-item-${value.id}" class="item col mb-5 shadow">
     <div class="display">
         <img src="${value.img}" alt="">
     </div>
