@@ -1,5 +1,6 @@
 import { Navbar } from "./classes/Navbar.js"
 import { ContactFormHelper } from "./classes/ContactFormHelper.js"
+import { CookieHelper } from "./classes/CookieHelper.js"
 
 function loadLinksAndAddListeners() {
     document.querySelectorAll("#main * a")
@@ -20,6 +21,9 @@ function loadNavWrapper(link, cb) {
         .load(cb)
 }
 
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll("a")
         .forEach((elem) => {
@@ -39,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const footer_newsletter = document.querySelector('#footer-newsletter');
     contactFormHelper.registerNewsletterForm(footer_newsletter);
 
-    
+    let cookieHelper = new CookieHelper;
+    cookieHelper.checkCookie();
 });
 
