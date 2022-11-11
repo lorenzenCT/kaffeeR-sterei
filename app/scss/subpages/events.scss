@@ -1,3 +1,16 @@
 section .events {
-    background-color: red;
+    //background-color: coral;
+
+    .row {
+        height: 17rem;
+        margin-bottom: 2rem;
+    }
+
+    .event {
+        .card {
+            min-width: 10rem;
+        }
+
+        height: 20rem;
+    }
 }

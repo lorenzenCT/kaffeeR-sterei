@@ -453,6 +453,13 @@ section#contact .formular .submit button i {
   transform: translate(-50%, -50%);
   color: black;
 }
-section .events {
-  background-color: red;
+section .events .row {
+  height: 17rem;
+  margin-bottom: 2rem;
+}
+section .events .event {
+  height: 20rem;
+}
+section .events .event .card {
+  min-width: 10rem;
 }
