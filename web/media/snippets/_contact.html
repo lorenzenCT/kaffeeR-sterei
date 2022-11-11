@@ -1,6 +1,62 @@
-<section class="container" id="Crop">
-    <h2>Kontaktiere uns...</h2>
-    <p>Du hast eine Frage, Anregung oder möchtest einen Platz reservieren. Kein Problem. Ruf einfach durch oder schreibe uns eine Mail: </p>
-    <p>Tel.: 0551 - 0815</p>
-    <p>Mail: info[at]bleecker-street.de</p>
+<section class="container-fluid px-0" id="contact">
+    <div class="contact">
+        <div class="titel">
+            <h3>Kontaktiere uns</h3>
+            <p>Du hast eine Frage, Anregung oder möchtest einen Platz reservieren? Kein Problem, ruf einfach durch oder schreibe uns eine Mail.</p>
+        </div>
+        <div class="number wrapper">
+            <i class="fa-solid fa-phone"></i>
+            <p>0551 - 0815<br/>0162 - 0815</p>
+        </div>
+        <div class="mail wrapper">
+            <i class="fa-solid fa-envelope"></i>
+            <p>info@bleecker-street.de<br/>sales@bleecker-street.de</p>
+        </div>
+        <div class="location wrapper">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Teststraße 12<br/>21337 Lüneburg<br/>Deutschland</p>
+        </div>
+        <hr>
+        <p>Hinweise zum Datenschutz finden Sie in der <a href="https://en.wikipedia.org/wiki/HTTP_404"><b>Datenschutzerklärung</b></a>.</p>
+    </div>
+    <div class="wrapper">
+        <div class="cube"></div>
+        <div class="formular">
+            <div class="name">
+                <div class="salutation-container wrapper">
+                    <select name="Anrede">
+                        <option value="herr" selected>Herr</option>
+                        <option value="frau">Frau</option>
+                        <option value="none">None</option>
+                    </select>
+                </div>
+                <div class="name-container wrapper">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" name="name" placeholder="Name">
+                </div>
+            </div>
+            <div class="mail wrapper">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" name="mail" placeholder="E-Mail">
+            </div>
+            <div class="number wrapper">
+                <i class="fa-solid fa-phone"></i>
+                <input type="text" name="number" placeholder="Telefon">
+            </div>
+            <div class="text wrapper">
+                <textarea name="message" cols="30" rows="10" maxlength="512" placeholder="Nachricht"></textarea>
+                <span class="info">0/512</span>
+            </div>
+            <div class="newsletter">
+                <input class="news-letter" type="checkbox" name="newsletter">
+                <p>Newsletter abonnieren</p>
+            </div>
+            <div class="submit wrapper">
+                <button>
+                    Submit
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
 </section>

@@ -1,55 +1,44 @@
-import { Router } from './classes/Router.js';
+import { Navbar } from "./classes/Navbar.js"
+import { ContactFormHelper } from "./classes/ContactFormHelper.js"
 
-let snippetsPath = "media/snippets/";
-let router = new Router(snippetsPath);
+function loadLinksAndAddListeners() {
+    document.querySelectorAll("#main * a")
+        .forEach((elem) => {
+            elem.addEventListener("click", (event) => {
+                event.preventDefault()
+                event.stopImmediatePropagation()
 
-const validRoutes = ['contact', 'events', 'farmers', 'impressum', 'index', 'latte_art', 'products'];
-
-let existingFileRoute = router.checkForExistingPageInLocation();
-if(existingFileRoute && validRoutes.includes(existingFileRoute)){
-    router.readFile('_'+existingFileRoute+'.html', function (data) {
-        router.switchContent(data, existingFileRoute, 0.1, "none");
-
-    });
-} else {
-    router.readFile('_index.html', function (data) {
-        router.switchContent(data, 'index', 0.1, "none");
-    });
+                loadNavWrapper(elem.getAttribute("href"), () => null)
+            })
+        })
 }
 
-function onItemClick(el, href) {
-    el.addEventListener('click', (e) => {
-        e.preventDefault();
-        removeActiveStateFromAllNavLis();
-        el.classList.add("active");
-        router.readFile("_" + href, function (data) {
-            router.switchContent(data, href.replace('.html', ''));
-        });
-    });
+function loadNavWrapper(link, cb) {
+    new Navbar(link)
+        .setAllInactive()
+        .toggleActive()
+        .load(cb)
 }
 
-function removeActiveStateFromAllNavLis(){
-    let all_lis = document.querySelectorAll('#navbar li a');
-    all_lis.forEach((el)=>{
-        el.classList.remove("active");
-    });
-}
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll("a")
+        .forEach((elem) => {
+            elem.addEventListener("click", (event) => {
+                event.preventDefault()
+                event.stopImmediatePropagation()
 
-// set all nav links
-function setClickableAnchorLinksWhichLoadsAnotherSnippet() {
-    let a_items = document.querySelectorAll('a');
-    let href = "";
+                loadNavWrapper(elem.getAttribute("href"), loadLinksAndAddListeners)
+            })
 
-    console.log(a_items);
+        })
 
-    a_items.forEach((el) => {
-        href = el.getAttribute('href');
-        if (href) {
-            onItemClick(el, href);
-        }
-    });
+    // load initial
+    new Navbar("index").load(loadLinksAndAddListeners)
+    
+    const contactFormHelper = new ContactFormHelper();
+    const footer_newsletter = document.querySelector('#footer-newsletter');
+    contactFormHelper.registerNewsletterForm(footer_newsletter);
 
+    
+});
 
-}
-
-setClickableAnchorLinksWhichLoadsAnotherSnippet();
