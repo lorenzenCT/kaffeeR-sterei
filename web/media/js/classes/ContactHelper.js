@@ -37,6 +37,7 @@ export class ContactHelper {
         const name = document.querySelector("#contact .formular .name .name-container input")
         const submit = document.querySelector("#contact .formular .submit button")
         const newsletter = document.querySelector("#contact .formular .newsletter input")
+        const dsgvo = document.querySelector("#contact .formular .dsgvo input")
 
         ;[
             { type: textarea, validator: this.validateText },
@@ -69,33 +70,38 @@ export class ContactHelper {
             })
 
             if (!document.querySelector("#contact .formular .wrapper.invalid")) {
-                const storageHelper = new StorageHelper()
-                const val = {
-                    name: name.value,
-                    salutation: salutation.value,
-                    number: number.value,
-                    mail: mail.value,
-                    message: textarea.value
+                if (dsgvo.checked) {
+                    const storageHelper = new StorageHelper()
+                    const val = {
+                        name: name.value,
+                        salutation: salutation.value,
+                        number: number.value,
+                        mail: mail.value,
+                        message: textarea.value
+                    }
+    
+                    console.log("add contact form", val)
+    
+                    storageHelper.storeData(
+                        "contact_form",
+                        mail.value,
+                        val
+                    )
+    
+                    if (newsletter.checked) {
+                        storageHelper.storeNewsletterSubscriber({
+                            email: mail.value,
+                            firstname: name.value.split(" ")[0],
+                            lastname: name.value.split(" ")[1]
+                        })
+                    }
+    
+                    elems.forEach((elem) => elem.value = "")
+                    this.defaultCharCounter(0)
+                    this.removeInvalidClass(dsgvo)
+                } else {
+                    this.addInvalidClass(dsgvo)
                 }
-
-                console.log("add contact form", val)
-
-                storageHelper.storeData(
-                    "contact_form",
-                    mail.value,
-                    val
-                )
-
-                if (newsletter.checked) {
-                    storageHelper.storeNewsletterSubscriber({
-                        email: mail.value,
-                        firstname: name.value.split(" ")[0],
-                        lastname: name.value.split(" ")[1]
-                    })
-                }
-
-                elems.forEach((elem) => elem.value = "")
-                this.defaultCharCounter(0)
             }
         })
     }
