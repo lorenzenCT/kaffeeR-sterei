@@ -1,7 +1,8 @@
 @import "../sizes.scss";
 @import "../colors.scss";
 
-section#contact {
+section#contact,
+section#contact-in-modal {
     display: flex;
     flex-wrap: wrap;
 
@@ -219,6 +220,17 @@ section#contact {
                     color: black;
                 }
             }
+        }
+    }
+}
+
+section#contact-in-modal {
+    .contact {
+        padding: 0;
+
+        .formular {
+            padding: 1rem;
+            border-radius: 7px;
         }
     }
 }

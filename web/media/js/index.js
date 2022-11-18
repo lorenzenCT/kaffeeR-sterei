@@ -15,10 +15,12 @@ function loadLinksAndAddListeners() {
 }
 
 function loadNavWrapper(link, cb) {
-    new Navbar(link)
-        .setAllInactive()
-        .toggleActive()
-        .load(cb)
+    if(link) {
+        new Navbar(link)
+            .setAllInactive()
+            .toggleActive()
+            .load(cb);
+    }
 }
 
 

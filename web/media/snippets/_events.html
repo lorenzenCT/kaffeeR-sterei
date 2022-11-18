@@ -21,7 +21,8 @@
                 <h6 class="card-subtitle mb-2 text-muted">17. September 2022 - 18 bis 22 Uhr</h6>
                 <p class="card-text">Einstiegs-Schulung Barista mit Sensorik, Anbaugebiete, Latte Art</p>
                 <div class="buttons">
-                  <button class="btn btn-outline-primary" disabled><a href="#" class="card-link">89 € / Person</a></button>
+                  <button class="btn btn-outline-primary" disabled data-bs-toggle="modal"
+                    data-bs-target="#signUpModal"><a class="card-link">89 € / Person</a></button>
                   <p class="card-link mb-0">ausgebucht</p>
                 </div>
               </div>
@@ -37,7 +38,8 @@
                 <h6 class="card-subtitle mb-2 text-muted">29. August 2022 - 18 bis 22 Uhr</h6>
                 <p class="card-text">Aufbaukurs, Vorkenntnisse notwendig. Equipment, Temparaturen, etc.</p>
                 <div class="buttons">
-                  <button class="btn btn-outline-primary" disabled><a href="#" class="card-link">129 € / Person</a></button>
+                  <button class="btn btn-outline-primary" disabled data-bs-toggle="modal"
+                    data-bs-target="#signUpModal"><a class="card-link">129 € / Person</a></button>
                   <p class="card-link mb-0">ausgebucht</p>
                 </div>
               </div>
@@ -53,7 +55,8 @@
                 <h6 class="card-subtitle mb-2 text-muted">3. September 2022 - 18 bis 22 Uhr</h6>
                 <p class="card-text">1x1 des Cocktail mixens mit Schwerpunkt auf Kaffee-addicted Cocktail</p>
                 <div class="buttons">
-                  <button class="btn btn-outline-primary"><a href="#" class="card-link">109 € / Person</a></button>
+                  <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#signUpModal"><a
+                      class="card-link">109 € / Person</a></button>
                   <a class="card-link">3 Plätze verfügbar</a>
                 </div>
               </div>
@@ -70,7 +73,8 @@
                 <p class="card-text">Leckere Pizza aus dem Steinofen. Dazu entspannter Jazz und leckerer Wein aus der
                   Toskana</p>
                 <div class="buttons">
-                  <button class="btn btn-outline-primary"><a href="#" class="card-link">Eintritt frei</a></button>
+                  <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#signUpModal"><a
+                      class="card-link">Eintritt frei</a></button>
                   <a class="card-link">unbeschränkt</a>
                 </div>
               </div>
@@ -81,27 +85,74 @@
       </div>
     </div>
 
-    <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-</button>
+    <!-- Sign Up Modal -->
+    <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="signUpModalLabel" data-template-role="signup_title">Modal title</h1>
+            <p data-template-role="signup_description">Description</p>
+            <p data-template-role="signup_date">Date</p>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+            <section id="contact-in-modal">
+
+              <div class="contact">
+                <div class="formular">
+                  <div class="name">
+                    <div class="salutation-container wrapper">
+                      <select name="Anrede">
+                        <option value="herr" selected>Herr</option>
+                        <option value="frau">Frau</option>
+                        <option value="none">None</option>
+                      </select>
+                    </div>
+                    <div class="name-container wrapper">
+                      <i class="fa-solid fa-user"></i>
+                      <input type="text" name="name" placeholder="Name *">
+                    </div>
+                  </div>
+                  <div class="mail wrapper">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" name="mail" placeholder="E-Mail *">
+                  </div>
+                  <div class="number wrapper">
+                    <i class="fa-solid fa-phone"></i>
+                    <input type="text" name="number" placeholder="Telefon *">
+                  </div>
+                  <div class="text wrapper">
+                    <textarea name="message" cols="30" rows="10" maxlength="512" placeholder="Nachricht *"></textarea>
+                    <span class="info">0/512</span>
+                  </div>
+                  <div class="newsletter">
+                    <input class="news-letter" type="checkbox" name="newsletter">
+                    <p>Newsletter abonnieren</p>
+                  </div>
+                  <div class="dsgvo">
+                    <input type="checkbox" name="newsletter">
+                    <p>Ich stimme der <a href="https://en.wikipedia.org/wiki/HTTP_404"><b>Datenschutzerklärung</b></a>
+                      zu.
+                    </p>
+                  </div>
+                  <div class="submit wrapper">
+                    <button>
+                      Submit
+                      <i class="fa-solid fa-angle-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+            </section>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 </section>
