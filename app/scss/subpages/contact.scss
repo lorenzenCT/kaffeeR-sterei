@@ -1,7 +1,8 @@
 @import "../sizes.scss";
 @import "../colors.scss";
 
-section#contact {
+section#contact,
+section#contact-in-modal {
     display: flex;
     flex-wrap: wrap;
 
@@ -157,17 +158,19 @@ section#contact {
             }
         }
 
-        .newsletter {
+        .newsletter, .dsgvo {
             display: flex;
+            align-items: center;
 
             input {
-                width: 20px;
-                height: 20px;
+                width: 15px;
+                height: 15px;
                 margin-right: 1em;
             }
 
             p {
                 color: white;
+                margin-bottom: 0;
             }
         }
 
@@ -209,4 +212,17 @@ section#contact {
             }
         }
     }
+}
+
+section#contact-in-modal {
+    .contact {
+        padding: 0;
+
+        .formular {
+            padding: 1rem;
+            border-radius: 7px;
+        }
+    }
+
+    
 }

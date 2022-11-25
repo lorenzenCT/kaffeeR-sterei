@@ -3,6 +3,7 @@ import { ProductLoader } from "./ProductLoader.js"
 import { Router } from "./Router.js"
 
 const snippetsPath = "media/snippets/"
+const scriptsPath = "media/js/sites/"
 const routes = {
     'contact': {
         "name": "contact",
@@ -19,6 +20,7 @@ const routes = {
         "name": "events",
         "nav-element": document.querySelector("#navbar li a[data-routename='events']"),
         "path": `${snippetsPath}_events.html`,
+        "scripts": `${scriptsPath}events.js`,
         "callback": function () { }
     },
     'farmers': {
@@ -109,6 +111,13 @@ export class Navbar {
             router.switchContent(data, this.route.name, 0, "default", () => {
                 this.route.callback()
                 cb()
+
+                if(this.route.scripts){
+                    if(typeof this.route.scripts === "string"){
+                        var script = document.createElement('script');
+                        script.src = this.route.scripts;
+                    }
+                }
             })
         })
     }

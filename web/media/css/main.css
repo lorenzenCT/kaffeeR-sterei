@@ -268,16 +268,23 @@ body #main section .items .item .information .more-information a[aria-expanded=t
   top: 45%;
   left: 45%;
 }
-section#contact {
+
+.opa-50 {
+  opacity: 50%;
+}
+section#contact,
+section#contact-in-modal {
   display: flex;
   flex-wrap: wrap;
 }
 @media screen and (min-width: 768px) {
-  section#contact {
+  section#contact,
+section#contact-in-modal {
     flex-wrap: nowrap;
   }
 }
-section#contact .contact {
+section#contact .contact,
+section#contact-in-modal .contact {
   display: flex;
   flex-direction: column;
   row-gap: 2em;
@@ -286,36 +293,44 @@ section#contact .contact {
   padding: 5em 4em;
 }
 @media screen and (min-width: 768px) {
-  section#contact .contact {
+  section#contact .contact,
+section#contact-in-modal .contact {
     width: 55%;
     padding: 6em;
   }
 }
-section#contact .contact p {
+section#contact .contact p,
+section#contact-in-modal .contact p {
   margin-bottom: 0;
 }
-section#contact .contact h3 {
+section#contact .contact h3,
+section#contact-in-modal .contact h3 {
   font-weight: 700;
 }
-section#contact .contact .wrapper {
+section#contact .contact .wrapper,
+section#contact-in-modal .contact .wrapper {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   width: 100%;
 }
-section#contact .contact .wrapper i {
+section#contact .contact .wrapper i,
+section#contact-in-modal .contact .wrapper i {
   padding-right: 2em;
 }
-section#contact .wrapper {
+section#contact .wrapper,
+section#contact-in-modal .wrapper {
   position: relative;
   width: 100%;
 }
 @media screen and (min-width: 768px) {
-  section#contact .wrapper {
+  section#contact .wrapper,
+section#contact-in-modal .wrapper {
     width: 45%;
   }
 }
-section#contact .wrapper .cube {
+section#contact .wrapper .cube,
+section#contact-in-modal .wrapper .cube {
   position: absolute;
   width: 50px;
   height: 50px;
@@ -324,7 +339,8 @@ section#contact .wrapper .cube {
   transform: rotate(45deg);
   background-color: var(--light-orange);
 }
-section#contact .formular {
+section#contact .formular,
+section#contact-in-modal .formular {
   background-color: var(--light-orange);
   display: flex;
   height: 100%;
@@ -335,25 +351,31 @@ section#contact .formular {
   padding: 5em 4em;
 }
 @media screen and (min-width: 1200px) {
-  section#contact .formular {
+  section#contact .formular,
+section#contact-in-modal .formular {
     padding: 5em calc((100% - 500px) / 2);
   }
 }
-section#contact .formular input {
+section#contact .formular input,
+section#contact-in-modal .formular input {
   background: none;
   border: none;
   outline: none;
   width: 100%;
   height: 100%;
 }
-section#contact .formular i {
+section#contact .formular i,
+section#contact-in-modal .formular i {
   padding: 0 0.7em;
   color: white;
 }
-section#contact .formular ::-webkit-input-placeholder, section#contact .formular ::placeholder {
+section#contact .formular ::-webkit-input-placeholder, section#contact .formular ::placeholder,
+section#contact-in-modal .formular ::-webkit-input-placeholder,
+section#contact-in-modal .formular ::placeholder {
   color: white;
 }
-section#contact .formular .wrapper {
+section#contact .formular .wrapper,
+section#contact-in-modal .formular .wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -362,15 +384,18 @@ section#contact .formular .wrapper {
   height: 3em;
   width: 100%;
 }
-section#contact .formular .wrapper.invalid {
+section#contact .formular .wrapper.invalid,
+section#contact-in-modal .formular .wrapper.invalid {
   border: 1px solid red;
 }
-section#contact .formular .text.wrapper {
+section#contact .formular .text.wrapper,
+section#contact-in-modal .formular .text.wrapper {
   position: relative;
   height: 150px;
   padding: 1em;
 }
-section#contact .formular .text.wrapper textarea {
+section#contact .formular .text.wrapper textarea,
+section#contact-in-modal .formular .text.wrapper textarea {
   overflow-y: scroll;
   word-wrap: break-word;
   resize: none;
@@ -381,25 +406,30 @@ section#contact .formular .text.wrapper textarea {
   outline: none;
   scrollbar-width: none;
 }
-section#contact .formular .text.wrapper textarea::-webkit-scrollbar {
+section#contact .formular .text.wrapper textarea::-webkit-scrollbar,
+section#contact-in-modal .formular .text.wrapper textarea::-webkit-scrollbar {
   display: none;
 }
-section#contact .formular .text.wrapper .info {
+section#contact .formular .text.wrapper .info,
+section#contact-in-modal .formular .text.wrapper .info {
   position: absolute;
   bottom: 0;
   right: 6px;
   font-size: 13px;
   color: white;
 }
-section#contact .formular .name {
+section#contact .formular .name,
+section#contact-in-modal .formular .name {
   display: flex;
   width: 100%;
   gap: 0.7em;
 }
-section#contact .formular .name .salutation-container.wrapper {
+section#contact .formular .name .salutation-container.wrapper,
+section#contact-in-modal .formular .name .salutation-container.wrapper {
   width: 4em;
 }
-section#contact .formular .name .salutation-container.wrapper select {
+section#contact .formular .name .salutation-container.wrapper select,
+section#contact-in-modal .formular .name .salutation-container.wrapper select {
   width: 100%;
   height: 100%;
   background: none;
@@ -408,26 +438,38 @@ section#contact .formular .name .salutation-container.wrapper select {
   appearance: none;
   text-align: center;
 }
-section#contact .formular .newsletter {
+section#contact .formular .newsletter, section#contact .formular .dsgvo,
+section#contact-in-modal .formular .newsletter,
+section#contact-in-modal .formular .dsgvo {
   display: flex;
+  align-items: center;
 }
-section#contact .formular .newsletter input {
-  width: 20px;
-  height: 20px;
+section#contact .formular .newsletter input, section#contact .formular .dsgvo input,
+section#contact-in-modal .formular .newsletter input,
+section#contact-in-modal .formular .dsgvo input {
+  width: 15px;
+  height: 15px;
   margin-right: 1em;
 }
-section#contact .formular .newsletter p {
+section#contact .formular .newsletter p, section#contact .formular .dsgvo p,
+section#contact-in-modal .formular .newsletter p,
+section#contact-in-modal .formular .dsgvo p {
   color: white;
+  margin-bottom: 0;
 }
-section#contact .formular .submit {
+section#contact .formular .submit,
+section#contact-in-modal .formular .submit {
   border-radius: 50px;
   margin-top: 2em;
 }
-section#contact .formular .submit:hover, section#contact .formular .submit:active {
+section#contact .formular .submit:hover, section#contact .formular .submit:active,
+section#contact-in-modal .formular .submit:hover,
+section#contact-in-modal .formular .submit:active {
   transition: ease-in-out 200ms;
   background-color: white;
 }
-section#contact .formular .submit button {
+section#contact .formular .submit button,
+section#contact-in-modal .formular .submit button {
   position: relative;
   width: 100%;
   height: 100%;
@@ -437,13 +479,18 @@ section#contact .formular .submit button {
   appearance: none;
   color: white;
 }
-section#contact .formular .submit button:hover, section#contact .formular .submit button:active {
+section#contact .formular .submit button:hover, section#contact .formular .submit button:active,
+section#contact-in-modal .formular .submit button:hover,
+section#contact-in-modal .formular .submit button:active {
   color: black;
 }
-section#contact .formular .submit button:hover i, section#contact .formular .submit button:active i {
+section#contact .formular .submit button:hover i, section#contact .formular .submit button:active i,
+section#contact-in-modal .formular .submit button:hover i,
+section#contact-in-modal .formular .submit button:active i {
   display: block;
 }
-section#contact .formular .submit button i {
+section#contact .formular .submit button i,
+section#contact-in-modal .formular .submit button i {
   display: none;
   position: absolute;
   top: 50%;
@@ -451,6 +498,52 @@ section#contact .formular .submit button i {
   transform: translate(-50%, -50%);
   color: black;
 }
-section .events {
-  background-color: red;
+
+section#contact-in-modal .contact {
+  padding: 0;
+}
+section#contact-in-modal .contact .formular {
+  padding: 1rem;
+  border-radius: 7px;
+}
+section .events .event {
+  margin-bottom: 1em;
+}
+section .events .event .card {
+  min-width: 10rem;
+}
+section .events .event .card .buttons {
+  display: flex;
+  gap: 10px;
+}
+section .events .event .card .buttons button {
+  width: 60%;
+}
+section .events .event .card .buttons p, section .events .event .card .buttons a {
+  width: 50%;
+  text-align: center;
+  line-height: 2;
+  align-self: center;
+}
+@media screen and (min-width: 576px) {
+  section .events .event .card {
+    min-height: 14rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  section .events .event .card {
+    min-height: 17rem;
+  }
+  section .events .event .card .buttons {
+    position: absolute;
+    bottom: 1rem;
+    gap: 20px;
+    align-items: center;
+  }
+  section .events .event .card .buttons button {
+    width: unset;
+  }
+  section .events .event .card .buttons a {
+    width: unset;
+  }
 }
