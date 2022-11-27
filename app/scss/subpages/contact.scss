@@ -147,7 +147,6 @@ section#contact-in-modal {
                 width: 4em;
                 
                 select {
-                    color: white;
                     width: 100%;
                     height: 100%;
                     background: none;
@@ -155,10 +154,6 @@ section#contact-in-modal {
                     outline: none;
                     appearance: none;
                     text-align: center;
-
-                    option {
-                        color: black;
-                    }
                 }
             }
         }
@@ -171,11 +166,6 @@ section#contact-in-modal {
                 width: 15px;
                 height: 15px;
                 margin-right: 1em;
-
-                &.invalid {
-                    appearance: none;
-                    border: 1px solid red;
-                }
             }
 
             p {
@@ -233,4 +223,6 @@ section#contact-in-modal {
             border-radius: 7px;
         }
     }
+
+    
 }

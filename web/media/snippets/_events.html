@@ -90,16 +90,15 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="signUpModalLabel" data-template-role="signup_title">Modal title</h1>
-            <p data-template-role="signup_description">Description</p>
-            <p data-template-role="signup_date">Date</p>
+            <h1 class="modal-title fs-5" id="signUpModalLabel"><span data-template-role="signup_date" class="opa-50">Date</span> - <span data-template-role="signup_title">Title</span></h1>
+            
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body">
+          <div class="modal-body" style="padding: 0;">
 
             <section id="contact-in-modal">
 
-              <div class="contact">
+              <div id="contact" style="width: 100%;">
                 <div class="formular">
                   <div class="name">
                     <div class="salutation-container wrapper">
@@ -148,7 +147,7 @@
             </section>
 
           </div>
-          <div class="modal-footer">
+          <div class="modal-footer d-none">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             <button type="button" class="btn btn-primary">Save changes</button>
           </div>
