@@ -4,14 +4,24 @@ export class Router {
         this.isLoading = false;
     }
 
-    readFile(file, cb) {
-        const rawFile = new XMLHttpRequest()
-        rawFile.open("GET", file, false);
+    /**
+     * 
+     * @param args - has to include values: file/route path and callback function
+     */
+    readFile(args) {
+        if (!args.file) {
+            return Error("No Route provided!");
+        } 
+        if (!args.cb) {
+            return Error("No Callback provided!");
+        }
+        const rawFile = new XMLHttpRequest();
+        rawFile.open("GET", args.file, false);
         rawFile.onreadystatechange = function () {
             if (rawFile.readyState === 4) {
                 if (rawFile.status === 200 || rawFile.status == 0) {
                     const data = rawFile.responseText;
-                    cb(data);
+                    args.cb(data);
                 }
             }
         }
@@ -33,30 +43,33 @@ export class Router {
 
         this.isLoading = !this.isLoading;
     }
-
-    switchContent(newContent, file, delay=0, animation="default", cb) {
+    
+    /**
+     * 
+     * @param {*} args - has to include newContent, file; optional: delay, animation, cb
+     */
+    switchContent(args) {
         console.log("switching content");
-        if(animation === "default"){
+        if (!args.animation || args.animation === "default") {
             this.toggleLoading();
         }
         setTimeout(() => {
-            // console.log(newContent);
-            document.querySelector('#main').innerHTML = newContent;
-            if(animation === "default"){
+            document.querySelector('#main').innerHTML = args.newContent;
+            if (args.animation === "default") {
                 this.toggleLoading();
             }
             console.log("switching done");
-            history.pushState({}, '', file);
+            history.pushState({}, '', args.file);
 
-            cb()
-        }, 1000 * delay);
+            args.cb()
+        }, 1000 * args.delay);
 
     }
 
-    checkForExistingPageInLocation(){
-        if(location.href.includes("/")){
+    checkForExistingPageInLocation() {
+        if (location.href.includes("/")) {
             let snippet = location.href.split("/")[3];
-            if(snippet) return snippet;
+            if (snippet) return snippet;
         }
     }
 }

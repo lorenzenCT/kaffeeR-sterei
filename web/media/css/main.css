@@ -435,7 +435,13 @@ section#contact-in-modal .formular .name .salutation-container.wrapper select {
   appearance: none;
   text-align: center;
 }
-section#contact .formular .newsletter, section#contact .formular .dsgvo {
+section#contact .formular .name .salutation-container.wrapper select option,
+section#contact-in-modal .formular .name .salutation-container.wrapper select option {
+  color: black;
+}
+section#contact .formular .newsletter, section#contact .formular .dsgvo,
+section#contact-in-modal .formular .newsletter,
+section#contact-in-modal .formular .dsgvo {
   display: flex;
   align-items: center;
 }
@@ -446,7 +452,15 @@ section#contact-in-modal .formular .dsgvo input {
   height: 15px;
   margin-right: 1em;
 }
-section#contact .formular .newsletter p, section#contact .formular .dsgvo p {
+section#contact .formular .newsletter input.invalid, section#contact .formular .dsgvo input.invalid,
+section#contact-in-modal .formular .newsletter input.invalid,
+section#contact-in-modal .formular .dsgvo input.invalid {
+  appearance: none;
+  border: 1px solid red;
+}
+section#contact .formular .newsletter p, section#contact .formular .dsgvo p,
+section#contact-in-modal .formular .newsletter p,
+section#contact-in-modal .formular .dsgvo p {
   color: white;
   margin-bottom: 0;
 }

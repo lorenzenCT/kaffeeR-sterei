@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node server.js && gulp watch && exit 1"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,9 @@
   },
   "homepage": "https://github.com/lorenzenCT/kaffeeR-sterei#readme",
   "dependencies": {
+    "axios": "^1.2.0",
     "live-server": "^1.2.2",
+    "querystring": "^0.2.1",
     "rellax": "^1.12.1"
   },
   "devDependencies": {
