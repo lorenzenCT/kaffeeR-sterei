@@ -18,15 +18,15 @@
   },
   "homepage": "https://github.com/lorenzenCT/kaffeeR-sterei#readme",
   "dependencies": {
-    "axios": "^1.2.0",
     "live-server": "^1.2.2",
-    "querystring": "^0.2.1",
     "rellax": "^1.12.1"
   },
   "devDependencies": {
+    "axios": "^1.2.0",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-sass": "^5.1.0",
+    "querystring": "^0.2.1",
     "sass": "^1.55.0"
   }
 }
