@@ -3,6 +3,7 @@ import { ContactFormHelper } from "./classes/ContactFormHelper.js"
 import { ContactHelper } from "./classes/ContactHelper.js"
 import { CookieHelper } from "./classes/CookieHelper.js"
 import { ApiHelper } from "./classes/ApiHelper.js"
+import { ProductLoader } from "./classes/ProductLoader.js"
 
 
 const snippetsPath = "media/snippets/"
@@ -72,8 +73,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let cookieHelper = new CookieHelper;
     cookieHelper.checkCookie();
 
+    
     new ApiHelper().readAllProducts((data) => {
         console.table(data);
     });
+    
 });
 
