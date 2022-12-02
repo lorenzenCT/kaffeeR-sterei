@@ -25,6 +25,7 @@ export class ApiHelper {
         params.user = "kaffee";
         params.passcode = "DieBesteRöstereiInGanzLüneburgUndUmgebung";
         params.action = "read";
+        // CRUD available
 
         // Turn the data object into an array of URL-encoded key/value pairs.
         let urlEncodedData = "", urlEncodedDataPairs = [], name;
@@ -35,6 +36,7 @@ export class ApiHelper {
         var http = new XMLHttpRequest();
         const url = "https://api.maltee.dev/api/v1/products.php";
         var params_string = urlEncodedDataPairs.toString();
+        params_string = params_string.replaceAll(',', '&');
         http.open('POST', url, true);
 
         //Send the proper header information along with the request
@@ -45,7 +47,7 @@ export class ApiHelper {
                 cb(http.responseText);
             }
         }
-        http.send(urlEncodedDataPairs);
+        http.send(params_string);
 
 
 

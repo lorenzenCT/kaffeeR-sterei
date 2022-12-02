@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
     cookieHelper.checkCookie();
 
     
-    new ApiHelper().readAllProducts((data) => {
+    let va = new ApiHelper().readAllProducts((data) => {
         console.table(data);
     });
     
