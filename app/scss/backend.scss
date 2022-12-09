@@ -1,3 +1,11 @@
 #navbar {
     background-color: #EEB58B;
 }
+
+#table_products {
+    [data-backend-product_edit] {
+        i:first-child {
+            margin-right: 10px;
+        }
+    }
+}
